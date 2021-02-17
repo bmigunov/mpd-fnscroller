@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+
+
+case $BLOCK_BUTTON in
+    1) mpc -q next ;;
+esac
+
+echo 

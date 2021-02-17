@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+
+
+if [[ -n $BLOCK_INSTANCE ]]; then
+    OUTPUT_STRING_LENGTH=$BLOCK_INSTANCE
+else
+    OUTPUT_STRING_LENGTH="default"
+fi
+
+case $BLOCK_BUTTON in
+    1) mpc -q clear;
+       mpc -q update;
+       mpc -q add / ;;
+    3) mpc -q stop ;;
+esac
+
+mpd-fnscroller -c $OUTPUT_STRING_LENGTH

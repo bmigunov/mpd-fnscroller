@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+
+
+case $BLOCK_BUTTON in
+    1) mpc -q toggle ;;
+esac
+
+MPC_STATUS="$(mpc status | awk 'FNR == 2 {print $1}')";
+if [ "$MPC_STATUS" == '[playing]' ]; then
+    echo ;
+else
+    echo ;
+fi

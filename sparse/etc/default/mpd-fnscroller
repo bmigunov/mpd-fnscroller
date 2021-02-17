@@ -1,0 +1,5 @@
+## mpd-fnscroller service environment file
+
+## Command line arguments for mpd-fnscroller server routine (mpd-fnscroller -h
+## for usage)
+# MPD_FNSCROLLER_ARGS=
