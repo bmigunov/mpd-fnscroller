@@ -33,16 +33,17 @@ interval=1
 
 [mpd]
 separator=false
-interval=1
 instance=16
+signal=12
+interval=1
 
 [mpd-prevbutton]
-interval=once
 separator=false
+interval=once
 
 [mpd-nextbutton]
-interval=once
 separator=true
+interval=once
 
 Length of the displayed file name is configured by the "instance" property
 passed to the mpd "block". Default value is 25 symbols.

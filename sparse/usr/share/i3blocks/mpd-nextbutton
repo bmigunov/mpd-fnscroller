@@ -8,3 +8,5 @@ case $BLOCK_BUTTON in
 esac
 
 echo 
+
+pkill -SIGRTMIN+12 i3blocks
