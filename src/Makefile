@@ -1,6 +1,6 @@
 CC = gcc
 LDFLAGS = -lpthread -lmpdclient
-SRC = runtime.c server.c client.c main.c
+SRC = main.c runtime.c server.c client.c
 CFLAGS = -Wall -Werror -fpic
 
 
@@ -9,4 +9,4 @@ CFLAGS = -Wall -Werror -fpic
 all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(SRC)
-	$(CC) $(CFLAGS) $(LDFLAGS) $(SRC) -o $(EXECUTABLE)
+	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) -o $(EXECUTABLE)

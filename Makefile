@@ -13,8 +13,8 @@ subsystem:
 .PHONY: clean install
 
 install: $(SRC_DIR)/$(EXECUTABLE)
-	install -d $(DESTDIR)/usr/bin
-	install -m 755 $(SRC_DIR)/$(EXECUTABLE) $(DESTDIR)/usr/bin/
+	install -d $(DESTDIR)/usr/local/bin
+	install -m 755 $(SRC_DIR)/$(EXECUTABLE) $(DESTDIR)/usr/local/bin/
 	install -d $(DESTDIR)/lib/systemd/user
 	install -m 644 sparse/lib/systemd/user/mpd-fnscroller.service $(DESTDIR)/lib/systemd/user
 	install -d $(DESTDIR)/etc/default
@@ -24,6 +24,8 @@ install: $(SRC_DIR)/$(EXECUTABLE)
 	install -m 755 sparse/usr/share/i3blocks/mpd-nextbutton $(DESTDIR)/usr/share/i3blocks
 	install -m 755 sparse/usr/share/i3blocks/mpd-playpause $(DESTDIR)/usr/share/i3blocks
 	install -m 755 sparse/usr/share/i3blocks/mpd-prevbutton $(DESTDIR)/usr/share/i3blocks
+	install -m 755 sparse/usr/share/i3blocks/mpd-repeat $(DESTDIR)/usr/share/i3blocks
+	install -m 755 sparse/usr/share/i3blocks/mpd-shuffle $(DESTDIR)/usr/share/i3blocks
 
 clean:
 	rm -f $(SRC_DIR)/*.o

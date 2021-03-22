@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+
+
+case $BLOCK_BUTTON in
+    1) mpc -q random ;;
+esac
+
+MPC_RANDOM_STATE="$(mpc status | awk '{for(i=1; i<=NF; i++) if($i=="random:") print $(i+1)}')";
+if [ "$MPC_RANDOM_STATE" == 'on' ]; then
+    echo ;
+else
+    echo ;
+    echo ;
+    echo \#131619;
+fi

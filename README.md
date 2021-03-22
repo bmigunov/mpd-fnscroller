@@ -23,8 +23,20 @@ default, they are getting installed into the i3blocks scripts directory. mpd is
 capable of displaying file name, LMB click stops the playback and updates
 playlist, RMB click stops the playback. LMB click on mpd-nextbutton executes
 "mpc next", LMB click on mpd-prevbutton executes "mpc prev", LMB click on
-mpd-playpause executes "mpc toggle"
-Next thing is to add the corresponding blocks into the i3blocks config, e.g.
+mpd-playpause executes "mpc toggle", LMB click on mpd-repeat executes "mpc
+repeat", LMB click on mpd-shuffle executes "mpc random".
+Next step is to add the corresponding blocks into the i3blocks config, for
+instance:
+
+[mpd-shuffle]
+interval=4
+min_width=
+separator=false
+
+[mpd-repeat]
+interval=4
+min_width=
+separator=false
 
 [mpd-playpause]
 min_width=
