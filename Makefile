@@ -24,6 +24,8 @@ install: $(SRC_DIR)/$(EXECUTABLE)
 	install -m 755 sparse/usr/share/i3blocks/mpd-nextbutton $(DESTDIR)/usr/share/i3blocks
 	install -m 755 sparse/usr/share/i3blocks/mpd-playpause $(DESTDIR)/usr/share/i3blocks
 	install -m 755 sparse/usr/share/i3blocks/mpd-prevbutton $(DESTDIR)/usr/share/i3blocks
+	install -m 755 sparse/usr/share/i3blocks/mpd-repeat $(DESTDIR)/usr/share/i3blocks
+	install -m 755 sparse/usr/share/i3blocks/mpd-shuffle $(DESTDIR)/usr/share/i3blocks
 
 clean:
 	rm -f $(SRC_DIR)/*.o

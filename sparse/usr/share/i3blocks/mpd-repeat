@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+
+
+case $BLOCK_BUTTON in
+    1) mpc -q repeat ;;
+esac
+
+MPC_REPEAT_STATE="$(mpc status | awk '{for(i=1; i<=NF; i++) if($i=="repeat:") print $(i+1)}')";
+if [ "$MPC_REPEAT_STATE" == 'on' ]; then
+    echo ;
+else
+    echo ;
+    echo ;
+    echo \#131619;
+fi
